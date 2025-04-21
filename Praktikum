@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>LAPORAN TEORI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: white;
+      color: black;
+    }
+
+    .rapi {
+      background-color: #f4f4f4;
+      color: #000;
+    }
+
+    .berantakan {
+      background-color: yellow;
+      color: red;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: normal;
+    }
+
+    h3 {
+      color: #0055aa;
+      cursor: pointer;
+    }
+
+    .section-content {
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body class="rapi">
+
+  <h1>LAPORAN TEORI</h1>
+  <h2>Radithya Putra Dewanto | 202332024</h2>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">1. Mengapa menggunakan CSS dan JavaScript dalam pemrograman web?</h3>
+    <div class="section-content">
+      <ul>
+        <li>CSS digunakan untuk mengatur tampilan dan layout halaman web.</li>
+        <li>JavaScript digunakan untuk menambahkan interaktivitas pada halaman web.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">2. Bagaimana CSS dan JavaScript dapat diintegrasikan dalam pemrograman web?</h3>
+    <div class="section-content">
+      <ul>
+        <li>Internal: Ditulis langsung dalam file HTML.</li>
+        <li>Eksternal: Menghubungkan file .css dan .js.</li>
+        <li>Inline: Ditulis langsung pada elemen HTML.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">3. Keuntungan menggunakan JavaScript dan CSS</h3>
+    <div class="section-content">
+      <b>Keuntungan CSS:</b>
+      <ul>
+        <li>Memisahkan konten dan tampilan.</li>
+        <li>Mudah dikembangkan dan dikelola.</li>
+        <li>Mempercepat load halaman.</li>
+      </ul>
+      <b>Keuntungan JavaScript:</b>
+      <ul>
+        <li>Menambahkan interaktivitas.</li>
+        <li>Dapat mengubah konten tanpa reload halaman (AJAX).</li>
+        <li>Dukungan luas di berbagai platform.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">4. Keuntungan menggunakan Bootstrap</h3>
+    <div class="section-content">
+      <ul>
+        <li>Tampilan responsif otomatis.</li>
+        <li>Komponen siap pakai.</li>
+        <li>Desain konsisten dan modern.</li>
+        <li>Menghemat waktu pengembangan.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">5. Contoh Penggunaan Bootstrap (Halaman Pribadi dari CV)</h3>
+    <div class="section-content">
+      <p>Halaman pribadi dari CV ini berfungsi untuk menampilkan data diri secara rapi dan menarik menggunakan Bootstrap. Dengan memanfaatkan komponen seperti card, list group, dan badge, informasi seperti pendidikan, pengalaman, dan kemampuan disusun secara terstruktur dan responsif. CSS digunakan untuk mempercantik tampilan, sedangkan Bootstrap mempercepat proses desain tanpa perlu menulis banyak kode dari awal. Hasilnya adalah halaman CV yang modern, mudah dibaca, dan cocok diakses dari berbagai perangkat.</p>
+
+      <p><strong>Contoh Tampilan Halaman:</strong></p>
+      <img src="Screenshot.png" alt="Screenshot halaman CV">
+    </div>
+  </div>
+
+  <button onclick="switchMode()">Ganti Mode Tampilan</button>
+
+  <script>
+    function toggleSection(header) {
+      const content = header.nextElementSibling;
+      const confirmHide = confirm("Apakah Anda ingin menyembunyikan bagian ini?");
+      if (confirmHide) {
+        content.style.display = content.style.display === "none" ? "block" : "none";
+      }
+    }
+
+    function switchMode() {
+      const body = document.body;
+      if (body.classList.contains("rapi")) {
+        body.classList.remove("rapi");
+        body.classList.add("berantakan");
+      } else {
+        body.classList.remove("berantakan");
+        body.classList.add("rapi");
+      }
+    }
+  </script>
+
+</body>
+</html>
